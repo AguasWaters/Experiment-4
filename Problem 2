@@ -28,7 +28,7 @@ int selection( int arr[], int s )
 
 	cout << "\nSorted data: ";
 	
-	for ( x = 0; x < s - 1; x++ )
+	for ( x = 0; x < s; x++ )
 	{
 		cout << arr[x] << " ";
 	}
