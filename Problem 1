@@ -108,7 +108,7 @@ int main ()
 	}
 	 while ( resume == 'y' || resume == 'Y');
 	 
-	
+	cout << "Thank You!!" << endl;
 	
 	_getch();
 	return 0;
