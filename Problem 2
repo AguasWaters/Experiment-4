@@ -1,0 +1,58 @@
+// Create a C++ functional program that sorts n number of elements using either selection or bubble sort
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int selection( int arr[], int s )
+{
+	int x, y, index, m;
+	
+	for ( x = 0; x < s - 1; x++ )
+	{
+		m = x;
+		for ( y = x + 1; y < s; y++)
+		{
+			if ( arr[y] < arr[m])
+			{
+				m = y;
+			}
+		}
+		
+		index = arr[x];
+		arr[x] = arr[m];
+		arr[m] = index;
+	}
+	cout << "\n\nAfter using selection or bubble sort..." << endl;
+
+	cout << "\nSorted data: ";
+	
+	for ( x = 0; x < s - 1; x++ )
+	{
+		cout << arr[x] << " ";
+	}
+}
+
+int main ()
+{
+	int s, arr[50];
+
+	cout << "Enter the array size: "; cin >> s;
+	cout << "Enter the " << s << " elements: ";
+	
+	for ( int x = 0; x < s; x++ )
+	{
+		cin >> arr[x];
+	}
+	
+	cout << "\nYour Data: ";
+	for ( int x = 0; x < s; x++ )
+	{
+		cout << arr[x] << " ";
+	}
+	
+	selection(arr, s);
+	_getch();
+	return 0;
+}
