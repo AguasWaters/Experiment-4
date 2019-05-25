@@ -1,0 +1,115 @@
+// Write a C++ program using functions that will display the calculator menu. The program will prompt the user to choose the operation choice (from 1 to 5).
+// Then it asks the user to input two integer vales for the calculation.
+// The program also asks the user to decide whether he/she wants to continue the operation.
+// If he/she inpu ‘y’, the program will prompt the user to choose the operation gain.  Otherwise, the program will terminate.
+
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+
+using namespace std;
+
+int Addition( int x, int y)
+{
+	return(x+y);
+}
+
+int Subtraction( int x, int y)
+{
+	return(x-y);
+}
+
+int Multiplication( int x, int y)
+{
+	return (x*y);
+}
+
+float Division( float x, float y)
+{
+	return (x/y);
+}
+
+int Modulus( int x, int y)
+{
+	return (x%y);
+}
+
+
+
+int main ()
+{
+	int x, y, c, z;
+	char resume;
+	
+	do
+	{
+		cout << "Welcome to a C++ Program Calculator " << endl;
+		cout << "Please choose an operator in the Menu :) " << endl;
+		cout << "Menu \n" << "1. Addition \n" << "2. Subtraction \n" << "3. Multiplication \n" << "4. Division \n" << "5. Modulus" << endl;
+		cin >> c;
+		cout << " " << endl;
+
+	switch (c)
+	{
+		case 1:
+	{
+			cout << "Enter your two numbers: ";
+			cin >> x >> y;
+			cout << "\nThe result is " << Addition(x, y) << endl;
+
+				break;
+	}
+	
+		case 2:
+	{
+			cout << "Enter your two numbers: ";
+			cin >> x >> y;
+			cout << "\nThe result is " << Subtraction(x, y) << endl;
+		
+				break;
+	}
+	
+		case 3:
+	{
+			cout << "Enter your two numbers: ";
+			cin >> x >> y;
+			cout << "\nThe result is " << Multiplication(x, y) << endl;
+		
+				break;
+	}
+	
+	 	case 4:
+	{
+			cout << "Enter your two numbers: ";
+			cin >> x >> y;
+			cout << "\nThe result is " << Division(x, y) << endl;
+		
+				break;
+	}
+	
+		case 5:
+	{
+			cout << "Enter your two numbers: ";
+			cin >> x >> y;
+			cout << "\nThe result is " << Modulus(x, y) << endl;
+		
+				break;
+	}	
+	
+		default:
+	{
+			cout << "You must only choose from 1 - 5." << endl;
+	}
+	
+	}	
+		cout << "\nWould you want to continue the operation?" << endl;
+		cout << "If yes please input y, if no just input anything" << endl;
+		cin >> resume;
+	}
+	 while ( resume == 'y' || resume == 'Y');
+	 
+	
+	
+	_getch();
+	return 0;
+}
